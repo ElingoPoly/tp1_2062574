@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/favico.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600&family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <!-- TODO : Référencer les bons fichiers CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css"/>
+  <title>PolyPlay</title>
+</head>
+
+<body>
+  <main>
+	<header>
+		<nav id="nav-bar">
+			<ul class="navigation">
+				<li>
+					<a href="./index.html" target="_self">
+						<div class="logo-container">
+							<img src="assets/img/logo-polyflix.png"/>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="./admin.html" target="_self">
+						<p>Admin</p>
+					</a>
+				</li>
+				<li>
+					<a href="./about.html" target="_self">
+						<p>A propos</p>
+					</a>
+				</li>
+			</ul>
+			<form id="search-form">
+				<input type="text" id="search-input" placeholder="Recherche de films" class="search-field">
+				<!-- fa-2x fa-search ne marche pas-->
+				<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</form>
+		</nav>
+	</header>
+    <form method="POST" >
+		<button class="submit-button" type="submit"><b>Ajouter le film</b></Button>
+	
+		<!--reference https://www.w3schools.com/tags/tag_fieldset.asp -->
+		<fieldset class="field-set">
+			<legend>Informations générales</legend>
+			<label>Nom du film: </label>
+			<input type="text"><br><br>
+	
+			<label>Description: </label>
+			<input type="text"><br><br>
+			
+			<label>Durée(minutes): </label>
+			<input type="text"><br><br>
+			
+			<label>Date de sortie </label>
+			<input type="date"><br><br>
+			
+			<label>Nom du film: </label>
+			<input type="text"><br><br>
+			
+			<label>Image:</label>
+			<input type="file"><br>
+			
+			<label>Video:</label>
+			<input type="file"><br>
+			
+			<label>Acteur.rices </label>
+			<input type="text">
+			<button type="button">+</button>
+			<p>1: Valérie Lepage</p>
+		</fieldset>
+    </form>
+  </main>
+</body>
+
+</html>
