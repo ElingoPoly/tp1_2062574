@@ -12,13 +12,14 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600&family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
   <!-- TODO : Référencer les bons fichiers CSS -->
+  <link
+	rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <link rel="stylesheet" href="./assets/css/styles.css"/>
   <title>PolyPlay</title>
 </head>
 
 <body>
-  <main>
-	<header>
+  <header>
 		<nav id="nav-bar">
 			<ul class="navigation">
 				<li>
@@ -46,39 +47,44 @@
 			</form>
 		</nav>
 	</header>
-    <form method="POST" >
-		<button class="submit-button" type="submit"><b>Ajouter le film</b></Button>
+  <main class="main-admin">
+    <form class="admin-form">
 	
 		<!--reference https://www.w3schools.com/tags/tag_fieldset.asp -->
 		<fieldset class="field-set">
 			<legend>Informations générales</legend>
-			<label>Nom du film: </label>
-			<input type="text"><br><br>
+			<label for="name">Nom du film: </label>
+			<input id="name" type="text" required><br><br>
 	
-			<label>Description: </label>
-			<input type="text"><br><br>
+			<label for="description">Description: </label>
+			<input id="description" type="text"><br><br>
 			
-			<label>Durée(minutes): </label>
-			<input type="text"><br><br>
+			<label for="duration">Durée (minutes): </label>
+			<input id="duration" type="number"><br><br>
 			
-			<label>Date de sortie </label>
+			<label for="release-date">Date de sortie: </label>
 			<input type="date"><br><br>
 			
-			<label>Nom du film: </label>
-			<input type="text"><br><br>
+			<label for="image">Image: </label>
+			<input id="image" type="file"><br>
 			
-			<label>Image:</label>
-			<input type="file"><br>
+			<label for="video">Vidéo: </label>
+			<input id="video" type="file"><br>
 			
-			<label>Video:</label>
-			<input type="file"><br>
-			
-			<label>Acteur.rices </label>
-			<input type="text">
-			<button type="button">+</button>
+			<label for="actor-input">Act.eurs.rices: </label>
+			<input id="actor-input" type="select" list="actors-datalist">
+			<datalist id="actors-datalist">
+				<option value="Margerite Montaigne">
+				<option value="Véronique Bélanger">
+				<option value="Chantale Tremblay">
+				<option value="Brad Pitt">
+			</datalist>
+			<button class="fa fa-plus"></button>
 			<p>1: Valérie Lepage</p>
 		</fieldset>
+		<input class="submit-button" type="submit" value="Ajouter le film">
     </form>
+	<img src="./assets/img/desert.jpg">
   </main>
 </body>
 

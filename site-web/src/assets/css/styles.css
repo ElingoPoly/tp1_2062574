@@ -228,6 +228,9 @@ section>p>a {
     margin: 20px;
 }
 
+fieldset{
+	position: relative;
+}
 
 fieldset
 input[type="text"],
@@ -238,6 +241,13 @@ input[type="number"]
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
     border-radius:  5px;
     border-style: none;
+	position: absolute;
+	right: 12px;
+}
+
+fieldset
+input[type="number"] {
+	width: 50px;
 }
 
 #profiles-page-container{
@@ -299,7 +309,16 @@ input[type="submit"]{
     padding: 20px;
 }
 
-
+.main-admin{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 18px;
+}
+.main-admin > img {
+	width: 240px;
+	height: 300px;
+}
 @media(max-width:800px){
 	*{
 		transition: .4s;
